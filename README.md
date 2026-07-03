@@ -1,47 +1,91 @@
-# Aparna Landing
+# آپارنا
 
-Persian static landing page for Aparna, the apartment charge management bot.
+صفحه فرود رسمی آپارنا؛ دستیار مدیریت شارژ ساختمان در پیام‌رسان بله.
 
-## Local preview
+[مشاهده سایت](https://aparna.ir/) · [شروع در بله](https://ble.ir/aptmngbot)
+
+## آپارنا چیست؟
+
+آپارنا یک ربات کاربردی برای مدیران ساختمان است که کارهای تکراری و زمان‌بر مدیریت شارژ را داخل بله ساده می‌کند. مدیر ساختمان می‌تواند واحدها، ساکنین، هزینه‌ها، دوره‌های شارژ، پرداخت‌ها و بدهکاران را در یک مسیر مشخص ثبت و پیگیری کند، بدون نیاز به فایل‌های پراکنده یا پیام‌های دستی.
+
+هدف آپارنا این است که مدیریت مالی ساختمان شفاف‌تر، سریع‌تر و قابل پیگیری‌تر شود؛ هم برای مدیر ساختمان و هم برای ساکنین.
+
+## مناسب برای
+
+- مدیران ساختمان‌های کوچک و متوسط که می‌خواهند محاسبه شارژ را دقیق‌تر انجام دهند.
+- ساختمان‌هایی که هنوز شارژ و پرداخت‌ها را با پیام، دفترچه یا فایل اکسل پیگیری می‌کنند.
+- مجتمع‌هایی که نیاز به گزارش بدهکاران، ثبت پرداخت و اطلاع‌رسانی منظم به ساکنین دارند.
+- ساکنانی که می‌خواهند مبلغ شارژ، ریز هزینه‌ها و وضعیت پرداخت خود را شفاف ببینند.
+
+## امکانات اصلی
+
+- **ثبت ساختمان و واحدها:** ثبت نام ساختمان، آدرس، طبقات، واحدها، متراژ، تعداد نفرات و اطلاعات ساکنین.
+- **محاسبه شارژ:** تقسیم هزینه‌ها به صورت مساوی، بر اساس تعداد نفرات یا بر اساس متراژ.
+- **مدیریت دوره شارژ:** ثبت هزینه‌های دوره، قبض‌های مشاع و مانده قابل پرداخت هر واحد.
+- **گزارش بدهکاران:** مشاهده وضعیت واحدها، پرداخت‌های ثبت‌شده و مانده بدهی.
+- **اعلان در بله:** ارسال اطلاعیه شارژ و جزئیات پرداخت برای ساکنین لینک‌شده.
+- **اشتراک شفاف:** فعال‌سازی اولیه رایگان برای هر ساختمان و ادامه استفاده با پلن انتخابی.
+
+## مسیر کار
+
+1. مدیر، ساختمان و واحدها را در ربات ثبت می‌کند.
+2. هزینه‌ها و روش تقسیم شارژ برای دوره مورد نظر وارد می‌شود.
+3. آپارنا سهم هر واحد، بدهی‌ها و گزارش دوره را محاسبه می‌کند.
+4. اعلان شارژ و اطلاعات پرداخت برای ساکنین داخل بله ارسال می‌شود.
+5. مدیر پرداخت‌های دریافتی را ثبت می‌کند و وضعیت ساختمان همیشه به‌روز می‌ماند.
+
+## درباره این مخزن
+
+این مخزن شامل صفحه فرود عمومی آپارنا است و به صورت یک سایت استاتیک ساخته شده است. منطق اصلی ربات، وبهوک و سرویس‌های بک‌اند در سرویس جداگانه نگهداری می‌شوند.
+
+فایل‌های اصلی:
+
+- `index.html`: ساختار محتوای صفحه فرود
+- `styles.css`: طراحی، تایپوگرافی فارسی و چیدمان واکنش‌گرا
+- `script.js`: تعامل‌های سبک صفحه مثل منوی موبایل
+- `assets/`: لوگو، تصویر اصلی و فونت فارسی
+- `deploy/`: اسکریپت استقرار فایل‌های استاتیک
+
+## پیش‌نمایش محلی
 
 ```sh
 python3 -m http.server 4173
 ```
 
-Then open `http://localhost:4173`.
+سپس آدرس زیر را باز کنید:
 
-## Deployment
+```text
+http://localhost:4173
+```
 
-Production static files are deployed to:
+## استقرار
+
+فایل‌های تولیدی روی سرور آپارنا در مسیر زیر منتشر می‌شوند:
 
 ```text
 /opt/apartment-bot-prod/web/landing
 ```
 
-The `apartment-bot` production Caddy container serves that directory at the root domain and keeps `/webhook` proxied to the bot.
-
-Production customer domains:
+دامنه‌های اصلی تولید:
 
 - `https://aparna.ir/`
 - `https://www.aparna.ir/`
 
-DNS for `aparna.ir` is managed by Arvan. Add `aparna.ir` and `www.aparna.ir` with the same CDN/proxy/origin settings as `aptmngbot.aparna.ir`: HTTPS at the edge, HTTP to origin `37.32.22.56:8080`.
-
-Deploy from a trusted machine with SSH access:
+استقرار دستی برای افراد دارای دسترسی SSH:
 
 ```sh
 deploy/manual-deploy.sh prod
 ```
 
-Stage is also supported:
+استقرار روی محیط stage نیز پشتیبانی می‌شود:
 
 ```sh
 deploy/manual-deploy.sh stage
 ```
 
-Environment overrides:
+متغیرهای قابل تنظیم:
 
-- `APARNA_SSH_TARGET`: SSH host, defaults to `aparna-srv-01`
-- `STAGE_APP_DIR`: defaults to `/opt/apartment-bot-stage`
-- `PROD_APP_DIR`: defaults to `/opt/apartment-bot-prod`
-- `LANDING_TARGET_DIR`: explicit remote target directory override
+- `APARNA_SSH_TARGET`: مقصد SSH، پیش‌فرض `aparna-srv-01`
+- `STAGE_APP_DIR`: مسیر محیط stage، پیش‌فرض `/opt/apartment-bot-stage`
+- `PROD_APP_DIR`: مسیر محیط production، پیش‌فرض `/opt/apartment-bot-prod`
+- `LANDING_TARGET_DIR`: مسیر مقصد سفارشی برای انتشار فایل‌ها
