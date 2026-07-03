@@ -20,6 +20,13 @@ Production static files are deployed to:
 
 The `apartment-bot` production Caddy container serves that directory at the root domain and keeps `/webhook` proxied to the bot.
 
+Production customer domains:
+
+- `https://aparna.ir/`
+- `https://www.aparna.ir/`
+
+DNS for `aparna.ir` is managed by Arvan. Add `aparna.ir` and `www.aparna.ir` with the same CDN/proxy/origin settings as `aptmngbot.aparna.ir`: HTTPS at the edge, HTTP to origin `37.32.22.56:8080`.
+
 Deploy from a trusted machine with SSH access:
 
 ```sh
