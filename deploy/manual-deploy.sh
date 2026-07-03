@@ -51,7 +51,7 @@ trap cleanup EXIT
 echo "Packing Aparna landing assets"
 tar --no-xattrs -czf "${tmpdir}/aparna-landing.tar.gz" \
 	-C "${repo_root}" \
-	index.html styles.css script.js assets
+	index.html go-bale.html styles.css script.js assets
 
 echo "Uploading bundle to ${ssh_target}:${remote_bundle}"
 scp "${tmpdir}/aparna-landing.tar.gz" "${ssh_target}:${remote_bundle}"

@@ -70,7 +70,7 @@ jobs:
           chmod 600 "${key_path}"
           ssh-keyscan -T 30 -H "${APARNA_SERVER_HOST}" > "${known_hosts_path}"
 
-          tar -czf "${bundle_path}" index.html styles.css script.js assets
+          tar -czf "${bundle_path}" index.html go-bale.html styles.css script.js assets
 
           ssh_opts=(
             -i "${key_path}"
