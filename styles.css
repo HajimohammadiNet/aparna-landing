@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Vazirmatn Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("assets/fonts/vazirmatn-arabic-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
 :root {
   color-scheme: light;
   --ink: #101820;
@@ -27,9 +36,9 @@ body {
   margin: 0;
   background: var(--white);
   color: var(--ink);
-  font-family: Vazirmatn, IRANSans, Shabnam, "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  font-family: "Vazirmatn Variable", Vazirmatn, IRANSans, Shabnam, "Noto Sans Arabic", Tahoma, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.85;
   letter-spacing: 0;
   text-rendering: geometricPrecision;
 }
@@ -106,7 +115,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 900;
+  font-weight: 850;
   font-size: 1.25rem;
   white-space: nowrap;
 }
@@ -152,7 +161,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.42);
   background: rgba(255, 255, 255, 0.12);
   padding: 9px 14px;
-  font-weight: 800;
+  font-weight: 750;
 }
 
 .nav-cta svg,
@@ -235,7 +244,7 @@ textarea {
 .eyebrow,
 .section-kicker {
   margin: 0 0 14px;
-  font-weight: 900;
+  font-weight: 800;
   color: var(--coral);
 }
 
@@ -247,7 +256,7 @@ textarea {
   margin: 0;
   font-size: 5rem;
   line-height: 1.05;
-  font-weight: 950;
+  font-weight: 900;
   letter-spacing: 0;
 }
 
@@ -267,7 +276,7 @@ textarea {
 
 .button {
   padding: 13px 18px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .button-primary {
@@ -304,7 +313,7 @@ textarea {
 .hero-metrics dt {
   margin: 0;
   font-size: 1.5rem;
-  font-weight: 950;
+  font-weight: 850;
   color: var(--white);
 }
 
@@ -334,7 +343,7 @@ textarea {
   position: relative;
   padding-inline-start: 18px;
   color: rgba(255, 255, 255, 0.84);
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .signal-inner p::before {
@@ -367,7 +376,7 @@ textarea {
   color: var(--ink);
   font-size: 2.6rem;
   line-height: 1.35;
-  font-weight: 950;
+  font-weight: 850;
   letter-spacing: 0;
 }
 
@@ -475,7 +484,7 @@ textarea {
   border-radius: 8px;
   background: var(--ink);
   color: var(--white);
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .steps strong {
@@ -516,7 +525,7 @@ textarea {
 
 .phone-top p {
   margin: 0;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .chat-thread {
@@ -543,7 +552,7 @@ textarea {
   justify-self: end;
   background: var(--teal-bright);
   color: #04211f;
-  font-weight: 850;
+  font-weight: 750;
 }
 
 .resident-band {
@@ -568,7 +577,7 @@ textarea {
   border-radius: 8px;
   padding: 18px;
   color: var(--ink-soft);
-  font-weight: 800;
+  font-weight: 750;
   background: var(--white);
 }
 
@@ -624,13 +633,13 @@ textarea {
   margin-block: 10px 14px;
   color: inherit !important;
   font-size: 2.15rem;
-  font-weight: 950;
+  font-weight: 850;
   line-height: 1.4;
 }
 
 .price span {
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 750;
 }
 
 .price-card a {
@@ -642,7 +651,7 @@ textarea {
   border-radius: 8px;
   background: var(--teal-bright);
   color: #04211f;
-  font-weight: 900;
+  font-weight: 800;
   padding: 12px 16px;
 }
 
@@ -659,7 +668,7 @@ textarea {
   background: rgba(229, 107, 79, 0.12);
   color: var(--coral) !important;
   padding: 4px 10px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .faq-list {
@@ -681,7 +690,7 @@ textarea {
   list-style: none;
   padding: 18px 0;
   color: var(--ink);
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -721,7 +730,7 @@ textarea {
   background: var(--ink);
   color: var(--white);
   padding: 10px 16px;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 :focus-visible {
