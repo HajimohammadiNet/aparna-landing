@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 env:
-  APARNA_SERVER_HOST: 37.32.22.56
+  APARNA_SERVER_HOST: 85.198.52.165
   STAGE_APP_DIR: /opt/apartment-bot-stage
   PROD_APP_DIR: /opt/apartment-bot-prod
 
